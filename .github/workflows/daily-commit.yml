@@ -1,0 +1,30 @@
+name: Daily Automated Commit
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # Runs daily at 9:00 AM UTC
+
+jobs:
+  automated-commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Create daily commit - 25ds3000015@ds.study.iitm.ac.in
+        run: |
+          # Create or update a status file with timestamp
+          echo "Last automated update: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > daily_status.txt
+          
+          # Configure git
+          git config --local user.email "automation@devsync.com"
+          git config --local user.name "DevSync Automation"
+          
+          # Add and commit changes
+          git add daily_status.txt
+          git commit -m "chore: daily automated commit on $(date -u '+%Y-%m-%d')"
+      
+      - name: Push changes to repository
+        run: |
+          git push
