@@ -1,5 +1,7 @@
 # Scheduled GitHub Action - DevSync
 
+![Daily Automated Commit](https://github.com/Mihir-Panjikar/scheduled_gh_action/actions/workflows/daily-commit.yml/badge.svg)
+
 This repository implements automated daily commits using GitHub Actions for DevSync Solutions.
 
 ## Workflow Details
