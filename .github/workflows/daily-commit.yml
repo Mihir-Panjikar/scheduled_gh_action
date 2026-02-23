@@ -18,8 +18,8 @@ jobs:
           echo "Last automated update: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" > daily_status.txt
           
           # Configure git
-          git config --local user.email "automation@devsync.com"
-          git config --local user.name "DevSync Automation"
+          git config --local user.email "mihirpanjikar@gmail.com"
+          git config --local user.name "Mihir Panjikar"
           
           # Add and commit changes
           git add daily_status.txt
